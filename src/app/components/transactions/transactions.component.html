@@ -1,0 +1,8 @@
+<h3>Transaction History</h3>
+<div *ngIf="transactions.length === 0">No transactions yet.</div>
+<ul>
+  <li *ngFor="let t of transactions">
+    {{t.date | date:'short'}} — {{t.type}} — ₹{{t.amount}} — {{t.toAccount || 'N/A'}} — {{t.note}}
+  </li>
+</ul>
+

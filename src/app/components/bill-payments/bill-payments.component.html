@@ -1,0 +1,24 @@
+<h3>Bill Payments</h3>
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <label>Category</label>
+  <select formControlName="category">
+    <option>Electricity</option>
+    <option>Water</option>
+    <option>Internet</option>
+    <option>Mobile</option>
+    <option>Gas</option>
+  </select>
+
+  <label>Biller/Consumer ID</label>
+  <input formControlName="biller" />
+
+  <label>Amount</label>
+  <input type="number" formControlName="amount" />
+
+  <label>Note</label>
+  <input formControlName="note" />
+
+  <button type="submit">Pay</button>
+</form>
+<div *ngIf="error" class="error">{{error}}</div>
+<div *ngIf="success" class="success">{{success}}</div>

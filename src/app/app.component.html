@@ -1,0 +1,19 @@
+<header>
+  <h1>💰 SecureBank - Online Banking System</h1>
+</header>
+
+<nav *ngIf="isLoggedIn">
+  <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
+  <a routerLink="/transfer" routerLinkActive="active">Transfer</a>
+  <a routerLink="/transactions" routerLinkActive="active">Transactions</a>
+  <a routerLink="/bill-payments" routerLinkActive="active">Bill Payments</a>
+  <a routerLink="/alerts" routerLinkActive="active">Alerts</a>
+  <button (click)="logout()">Logout</button>
+</nav>
+
+<!-- 👇 Where all pages appear -->
+<router-outlet></router-outlet>
+
+<footer>
+  <p>© 2025 SecureBank. All Rights Reserved.</p>
+</footer>
